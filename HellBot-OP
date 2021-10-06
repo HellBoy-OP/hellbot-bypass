@@ -4,7 +4,6 @@ _repo_zip () {
     local regex
     regex='(https?)://github.com/.+/.+'
     echo "aHR0cHM6Ly9naXRodWIuY29tL1RoZVZhZGVycy9JblZhZGUvYXJjaGl2ZS9tYXN0ZXIuemlw" | base64 -d
-    fi
 }
 
 _repo_link () {
@@ -12,7 +11,6 @@ _repo_link () {
     local rlink
     regex='(https?)://github.com/.+/.+'
     rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL1RoZVZhZGVycy9JblZhZGUvYXJjaGl2ZS9tYXN0ZXIuemlw" | base64 -d`
-    fi
     echo "$rlink"
 }
 
