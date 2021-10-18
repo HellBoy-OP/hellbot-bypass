@@ -6,8 +6,9 @@ RUN git clone -b clients https://github.com/TheVaders/InVade.git root/TheVaders
 RUN pip install --upgrade pip
 RUN pip3 install -r root/TheVaders/requirements.txt
 RUN mv ./BOT root/TheVaders
-RUN chmod +x root/TheVaders/BOT
 
 WORKDIR root/TheVaders
 
-CMD root/TheVaders/BOT
+RUN chmod +x ./BOT
+
+CMD ./BOT
