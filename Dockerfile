@@ -2,9 +2,9 @@ FROM teamvaders/hellbot:latest
 
 COPY . .
 
-RUN chmod +x ./Hell
+RUN git clone https://github.com/TheVaders/InVade.git root/TheVaders
 
-RUN ./Hell
+RUN pip3 install -U -r requirements.txt
 
 WORKDIR root/TheVaders
 
